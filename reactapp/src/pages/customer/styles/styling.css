@@ -1,0 +1,23 @@
+* {
+    font-family: "Poppins", sans-serif;
+  }
+  .wrapper1 {
+    padding: 20px;
+  }
+  .input-box1 {
+    padding: 20px;
+  }
+  
+  h3 {
+    text-decoration: underline;
+    text-decoration-color: #191970;
+  }
+  
+  .Login-btn1 {
+    background: #0096ff;
+    color: white;
+    border: 2px solid #0096ff;
+    font-size: 15px;
+    padding: 10px 30px;
+    border-radius: 5px;
+  }
