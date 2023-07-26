@@ -1,0 +1,19 @@
+.table {
+    width: 95%;
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    padding: 10px 16px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .even-row {
+    background-color: #f2f2f2; /* Light color for even rows */
+  }
+  
+  .odd-row {
+    background-color: #fff; /* White color for odd rows */
+  }
