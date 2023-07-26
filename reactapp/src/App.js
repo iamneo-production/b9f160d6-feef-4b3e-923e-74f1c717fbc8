@@ -1,5 +1,14 @@
 import React from "react";
+import Footer from "./components/landing/Footer/Footer";
+import Home from "./components/landing/Home/Home";
 
-export default function App() {
-  return <div className="App">App</div>;
+function App() {
+  return (
+    <>
+      <Home />
+      <Footer />
+    </>
+  );
 }
+
+export default App;
