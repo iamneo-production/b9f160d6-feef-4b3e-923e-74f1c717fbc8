@@ -8,7 +8,7 @@ const RepairID = () => {
   const [repair, setRepair] = useState({});
   const [show, setShow] = useState(true);
   const [employeeList, setEmployeeList] = useState([]);
-  const [selectedEmployeeId, setSelectedEmployeeId] = useState(null);
+
   const param = useParams();
   const employeeURL = `${BASE_URL}/employees`;
 
@@ -28,8 +28,6 @@ const RepairID = () => {
           status,
           date,
         });
-
-        setSelectedEmployeeId(response.data.employee?.id || null);
       } catch (error) {
         console.log(error);
       }
@@ -78,7 +76,6 @@ const RepairID = () => {
   useEffect(() => {
     console.log(repair.employee);
   }, [repair.employee]);
-  
 
   const handleSaveRepair = async () => {
     try {
