@@ -1,0 +1,83 @@
+.navbar {
+    background-color: rgb(8, 145, 178);
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    color: aqua;
+  }
+  
+  .information {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #unique {
+    display: flex;
+    gap: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+    padding: 3rem;
+    max-width: 50rem;
+    justify-content: center;
+    
+  }
+  
+  #unique .information .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  #unique .information .content input {
+    width: 100%;
+    margin-right: 10px;
+    outline: none;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    padding: 8px 10px;
+    border-radius: 1px;
+    transition: all 0.3s ease;
+  }
+  
+  #unique .information .content label {
+    width: 7rem;
+    color: #757575;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  
+  #edit {
+    font-size: medium;
+    font-weight: 300;
+    padding: 5px 15px 5px 15px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    color: white;
+    background: brown;
+  }
+  
+  #save {
+    /* margin: auto; */
+    font-size: medium;
+    font-weight: 300;
+    padding: 5px 15px 5px 15px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    color: white;
+    background: green;
+  }
+  
+  .parentbutton {
+    padding-right: 15px;
+    display: flex;
+    gap: 4px;
+    justify-content: end;
+    align-items: center;
+  }
