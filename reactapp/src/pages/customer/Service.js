@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import "./styles/styling.css";
-import api from "../../utils/api";
+import api, { BASE_URL } from "../../utils/api";
 import Navbar from "../../components/admin/Navbar";
 import SidebarShow from "../../components/admin/SidebarShow";
 import { TokenContext } from "../../utils/TokenContext";
@@ -17,7 +17,7 @@ const Service = () => {
 
   useEffect(() => {
     api
-      .get("http://localhost:9000/devices")
+      .get(`${BASE_URL}/devices`)
       .then((response) => {
         setDevices(response.data);
       })
@@ -57,7 +57,7 @@ const Service = () => {
 
     console.log(repairData);
     api
-      .post("http://localhost:9000/repairs", repairData)
+      .post(`${BASE_URL}/repairs`, repairData)
       .then((response) => {
         console.log("Repair data saved successfully:", response.data);
         alert("Successful repair request");
