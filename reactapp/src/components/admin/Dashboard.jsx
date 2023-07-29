@@ -5,7 +5,6 @@ import {
   MdCloudDone,
   MdSevereCold,
 } from "react-icons/md";
-import { MdPendingActions } from "react-icons/md";
 import Piechart from "./Piechart";
 import api, { BASE_URL } from "../../utils/api";
 
@@ -25,7 +24,7 @@ const Dashboard = () => {
 
   const fetchCustomerCount = async () => {
     try {
-      const response = await api.get("http://localhost:9000/customers");
+      const response = await api.get(`${BASE_URL}/customers`);
       setCustomerCount(response.data.length);
     } catch (error) {
       console.error("Error fetching customer count:", error);
@@ -34,7 +33,7 @@ const Dashboard = () => {
 
   const fetchEmployeeCount = async () => {
     try {
-      const response = await api.get("http://localhost:9000/employees");
+      const response = await api.get(`${BASE_URL}/employees`);
       setEmployeeCount(response.data.length);
     } catch (error) {
       console.error("Error fetching employee count:", error);
@@ -52,7 +51,7 @@ const Dashboard = () => {
 
   const fetchServiceCount = async () => {
     try {
-      const response = await api.get("http://localhost:9000/repairs");
+      const response = await api.get(`${BASE_URL}/repairs`);
       const allRepairs = response.data;
 
       setServiceCount(allRepairs.length);

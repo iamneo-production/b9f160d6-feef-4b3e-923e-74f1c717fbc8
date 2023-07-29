@@ -4,9 +4,7 @@ import Sidebar from "../../../components/admin/Sidebar";
 import { NavLink } from "react-router-dom";
 import { FiEdit } from "react-icons/fi";
 import { MdDelete } from "react-icons/md";
-import api from "../../../utils/api";
-
-const baseURL = "http://localhost:9000/customers";
+import api, { BASE_URL } from "../../../utils/api";
 
 const Customers = () => {
   const [customers, setCustomers] = useState([]);
@@ -17,7 +15,7 @@ const Customers = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await api.get(baseURL);
+        const response = await api.get(`${BASE_URL}/customers`);
         setCustomers(response.data);
         setLoading(false);
       } catch (error) {
@@ -43,7 +41,7 @@ const Customers = () => {
   const deleteRecord = async (id) => {
     if (window.confirm("Are you sure you want to delete this customer?")) {
       try {
-        await api.delete(`${baseURL}/${id}`);
+        await api.delete(`${BASE_URL}/customers/${id}`);
         setCustomers(customers.filter((customer) => customer.id !== id));
       } catch (error) {
         console.log("Error deleting customer:", error);
