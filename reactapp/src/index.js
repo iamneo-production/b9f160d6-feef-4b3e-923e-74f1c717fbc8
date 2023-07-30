@@ -1,19 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
-/*import Registration from './Components/Registration'
-import Login from "./Components/Login" */
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./index.css";
+import { RouterProvider } from "react-router-dom";
 
-import Home from "./pages/Home";
-import Profile from "./pages/Profile";
-import Service from "./pages/Service";
-import Navbar1 from "./NavComponents/Navbar1"
-
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
- <App/>
+import router from "./router";
+import { TokenProvider } from "./utils/TokenContext";
+const decodedToken = JSON.parse(localStorage.getItem("decodedToken"));
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <TokenProvider decodedToken={decodedToken}>
+      <RouterProvider router={router} />
+    </TokenProvider>
+  </React.StrictMode>
 );
 
 
