@@ -20,7 +20,7 @@ public class SpringappApplication {
 			public void addCorsMappings(CorsRegistry registry) {
 				registry
 						.addMapping("/**")
-						.allowedOrigins("http://localhost:3000")
+						.allowedOrigins("https://8081-feabdebaacadddcfeacffbbbdffeaeaadbdbabf.project.examly.io")
 						.allowedMethods("*");
 			}
 		};
