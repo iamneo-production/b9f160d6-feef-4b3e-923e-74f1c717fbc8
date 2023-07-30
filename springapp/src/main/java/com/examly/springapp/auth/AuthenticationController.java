@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/api/v1/auth")
 @RequiredArgsConstructor
-@CrossOrigin
+@CrossOrigin("https://8081-afdebfcecbccfeacffbbbdffeaeaadbdbabf.project.examly.io")
 public class AuthenticationController {
 
   private final AuthenticationService service;
