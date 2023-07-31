@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.examly.springapp.model.Customer;
 import com.examly.springapp.service.CustomerService;
 
-@CrossOrigin
+@CrossOrigin("https://8081-aceccbebcbacfeacffbbbdffeaeaadbdbabf.project.examly.io")
 @RestController
 @RequestMapping("/customers")
 public class CustomerController {
