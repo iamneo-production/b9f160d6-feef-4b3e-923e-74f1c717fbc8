@@ -11,7 +11,7 @@ import java.util.*;
 
 @RestController
 @RequestMapping("/devices")
-@CrossOrigin("http://localhost:3000")
+@CrossOrigin("https://8081-dfabdbecfeacffbbbdffeaeaadbdbabf.project.examly.io")
 public class DeviceController {
 
     @Autowired
