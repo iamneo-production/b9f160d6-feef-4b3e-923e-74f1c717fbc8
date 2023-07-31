@@ -11,7 +11,7 @@ import java.util.*;
 
 @RestController
 @RequestMapping("/devices")
-@CrossOrigin
+@CrossOrigin("https://8081-dccdbaeddaaddcfecfeacffbbbdffeaeaadbdbabf.project.examly.io")
 public class DeviceController {
 
     @Autowired
