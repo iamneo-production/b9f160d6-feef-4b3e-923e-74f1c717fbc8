@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.examly.springapp.model.Repair;
 import com.examly.springapp.service.RepairService;
 
-@CrossOrigin
+@CrossOrigin("http://localhost:3000")
 @RestController
 @RequestMapping("/repairs")
 public class RepairController {
